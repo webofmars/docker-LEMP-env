@@ -1,0 +1,21 @@
+web:
+  image: tutum/apache-php
+  ports:
+    - "80:80"
+  volumes:
+    - /Users/nico/Sites:/var/www
+    - /Users/nico/Sites/docker/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
+    - /Users/nico/Sites/docker/sites:/etc/apache2/sites-enabled
+#        - /var/www/docker/sites:/etc/apache2/sites-enabled
+  environment:
+    - ALLOW_OVERRIDE=true
+
+  links:
+    - db:db
+
+db:
+  image: mysql
+  volumes:
+    - /var/lib/boot2docker/mysql:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
