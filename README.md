@@ -9,5 +9,5 @@ Docker dev platform - Version 1.0
 
 *Usage :*
 
-run "docker-compose -f docker-lnp.yml" for Nginx + PHP-FPM
-run "docker-compose -f docker-lnpm.yml" for Nginx + PHP-FPM + Mysql
+- run "docker-compose -f docker-lnp.yml" for Nginx + PHP-FPM
+- run "docker-compose -f docker-lnpm.yml" for Nginx + PHP-FPM + Mysql
