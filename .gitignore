@@ -1,0 +1,5 @@
+data/nginx/var/www/html/*
+data/nginx/logs/*
+data/php5-fpm/logs/*
+data/mysql/data/*
+data/mysql/logs/*
