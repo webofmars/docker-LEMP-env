@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.0
+Docker dev platform - Version 1.1
 =============================================================
 
 	- based on webofmars images (std debian jessy)
@@ -9,5 +9,5 @@ Docker dev platform - Version 1.0
 
 *Usage :*
 
-- run "docker-compose -f docker-lnp.yml" for Nginx + PHP-FPM
-- run "docker-compose -f docker-lnpm.yml" for Nginx + PHP-FPM + Mysql
+- run "docker-compose -f docker-lnp.yml up" for Nginx + PHP-FPM
+- run "docker-compose -f docker-lnpm.yml up" for Nginx + PHP-FPM + Mysql
