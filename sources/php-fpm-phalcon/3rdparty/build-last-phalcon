@@ -1,0 +1,18 @@
+#!/bin/sh
+
+UBUNTU_VERSION=$(whiptail --title "Install PHP Phalcon for Debian(8)" --radiolist "\nSelect Ubuntu Version" 15 50 4 "vivid" "Ubuntu Vivid 15.04" ON "utopic" "Ubuntu UTopic 14.10" OFF "trusty" "Ubuntu Trusty 14.04" OFF "precise" "Ubuntu Precise 12.04" OFF 3>&2 2>&1 1>&3)
+
+echo "Install required packages..."
+apt-get install -yqq devscripts build-essential php5-dev libpcre3-dev
+echo "DONE"
+
+echo "deb-src http://ppa.launchpad.net/phalcon/stable/ubuntu ${UBUNTU_VERSION} main" > /etc/apt/sources.list.d/phalcon.list 
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1E569794
+
+echo "APT-GET Update..."
+apt-get update -yqq
+echo "DONE"
+
+echo -n "Building phalcon package..."
+apt-get source -yqq --build php-phalcon
+echo "DONE"

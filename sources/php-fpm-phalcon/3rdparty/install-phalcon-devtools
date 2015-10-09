@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo -n "Installing phalcon devtools to /opt/phalcon-devtools..."
+
+### If devtools directory exists we will remove it before we go on
+[ -d /opt/phalcon-devtools ] && rm -Rf /opt/phalcon-devtools
+
+### Clone new version
+cd /tmp
+git clone https://github.com/phalcon/phalcon-devtools.git /opt/phalcon-devtools --quie
+
+### And move it to /usr/local/bin
+[ -f /usr/local/bin/phalcon ] && rm -Rf /usr/local/bin/phalcon
+ln -s /opt/phalcon-devtools/phalcon.php /usr/local/bin/phalcon
+chmod ugo+x /usr/local/bin/phalcon
+echo "DONE"
