@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DCKCP=$(which docker-compose)
+
+$DCKCP -f ./config/LEMP.yml up

@@ -22,3 +22,4 @@ WORKDIR /etc/php5
 CMD ["php5-fpm", "-F"]
 EXPOSE 9200
 COPY ./data/php5 /etc/php5
+COPY ./data/composer.phar /usr/local/bin/composer
