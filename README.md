@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.4
+Docker dev platform - Version 1.5
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -20,6 +20,7 @@ Docker dev platform - Version 1.4
 
 v1.5:
 - ajout de imagemagick et de son support PHP
+- image phalcon basée sur webofmars/php-fpm
 
 v1.4 :
 - ajout de PhpMyAdmin
