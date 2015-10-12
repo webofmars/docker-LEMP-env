@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.7
+Docker dev platform - Version 1.9
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -18,6 +18,13 @@ Docker dev platform - Version 1.7
 
 =============================================================
 ## Changelog :
+
+v1.9:
+- PHP improvements
+- better gitignore file
+
+v1.8:
+- phalcon bugfix
 
 v1.7:
 - réorganisation des fichiers

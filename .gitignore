@@ -2,8 +2,18 @@
 [Tt]humbs.db
 *.DS_Store
 
-# project specific
+### project specific ###
+
+# web
 /data/nginx/logs/*
+/data/nginx/var/www/html/*
+
+# php-fpm
 /data/php5-fpm/logs/*
+
+# php-fpm-phalcon
+/data/php5-fpm-phalcon/logs/*
+
+# mysql
 /data/mysql/data/*
 /data/mysql/logs/*
