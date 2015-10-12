@@ -14,6 +14,7 @@ web:
 php:
     image: webofmars/php-fpm
     volumes:
+        - ../data/php5-fpm/etc:/etc/php5
         - ../data/php5-fpm/logs:/var/log
         - ../data/nginx/var/www/html:/var/www/html
     ports:

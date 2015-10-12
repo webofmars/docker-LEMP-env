@@ -14,7 +14,8 @@ web:
 php:
     image: webofmars/php-fpm-phalcon
     volumes:
-        - ../data/php5-fpm/logs:/var/log
+        - ../data/php5-fpm-phalcon/etc:/etc/php5
+        - ../data/php5-fpm-phalcon/logs:/var/log
         - ../data/nginx/var/www/html:/var/www/html
     ports:
         - "9200:9200"

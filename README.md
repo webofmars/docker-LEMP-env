@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.9
+Docker dev platform - Version 1.10
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -18,6 +18,8 @@ Docker dev platform - Version 1.9
 
 =============================================================
 ## Changelog :
+v1.10:
+- corrige un problème de montage avec les volumes php5-fpm-phalcon. Ils seront dorénavant montés.
 
 v1.9:
 - PHP improvements
