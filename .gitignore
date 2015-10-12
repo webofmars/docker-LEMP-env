@@ -1,4 +1,9 @@
-data/nginx/logs/*
-data/php5-fpm/logs/*
-data/mysql/data/*
-data/mysql/logs/*
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+# project specific
+/data/nginx/logs/*
+/data/php5-fpm/logs/*
+/data/mysql/data/*
+/data/mysql/logs/*

@@ -1,19 +1,21 @@
 web:
+    environment:
+        USEPHP: true
     image: webofmars/nginx
     ports:
         - "80:80"
     volumes:
-        - ./data/nginx/logs:/var/log/nginx
-        - ./data/nginx/etc:/etc/nginx
-        - ./data/nginx/var/www/html:/var/www/html
+        - ../data/nginx/logs:/var/log/nginx
+        - ../data/nginx/etc:/etc/nginx
+        - ../data/nginx/var/www/html:/var/www/html
     links:
         - php:php
 
 php:
     image: webofmars/php-fpm-phalcon
     volumes:
-        - ./data/php5-fpm/logs:/var/log
-        - ./data/nginx/var/www/html:/var/www/html
+        - ../data/php5-fpm/logs:/var/log
+        - ../data/nginx/var/www/html:/var/www/html
     ports:
         - "9200:9200"
     links:
@@ -22,8 +24,8 @@ php:
 db:
     image: mysql
     volumes:
-        - ./data/mysql/data:/var/lib/mysql
-        - ./data/mysql/logs:/var/log/mysql
+        - ../data/mysql/data:/var/lib/mysql
+        - ../data/mysql/logs:/var/log/mysql
     ports:
         - "3306:3306"
     environment:

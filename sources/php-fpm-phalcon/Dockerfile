@@ -1,4 +1,5 @@
 FROM webofmars/php-fpm:latest
+MAINTAINER webofmars contact@webofmars.com
 VOLUME ["/etc/php5", "/var/log"]
 WORKDIR /etc/php5
 CMD ["php5-fpm", "-F"]

@@ -1,4 +1,6 @@
 #!/bin/bash
 
 DOCKER=$(which docker)
-$DOCKER run webofmars/nginx:latest
+DATADIR="$(realpath $(dirname $0))/data"
+
+$DOCKER run -e 'USEPHP=false' -v ${DATADIR}/nginx/etc:/etc/nginx -v ${DATADIR}/nginx/var/www/html:/var/www/html -v ${DATADIR}/nginx/logs:/var/log/nginx webofmars/nginx:latest

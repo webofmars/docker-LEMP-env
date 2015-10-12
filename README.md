@@ -1,9 +1,10 @@
-Docker dev platform - Version 1.5
+Docker dev platform - Version 1.7
 =============================================================
 
     - based on webofmars images (std debian jessy)
     - nginx
     - php5-fpm
+    - phalcon (PHP engine sous stéroides)
     - mysql
 
 =============================================================
@@ -17,6 +18,14 @@ Docker dev platform - Version 1.5
 
 =============================================================
 ## Changelog :
+
+v1.7:
+- réorganisation des fichiers
+- coorection d'un bug lié au dernier commit (chemin relatif)
+- coorection du run-LE qui ne marchait plus sans PHP (ce qui n'est pas le but)
+
+v1.6:
+- bugfix mineur
 
 v1.5:
 - ajout de imagemagick et de son support PHP

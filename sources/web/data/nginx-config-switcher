@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "- running $0"
+
+echo "-- generating configuration"
+
+case $USEPHP in
+	OFF|off|FALSE|false|OFF|off|0)
+    		echo "--- PHP configuration will be OFF"
+    		ln -sf /etc/nginx/snippets/php-false /etc/nginx/snippets/php
+		;;
+	*)
+    		echo "--- PHP configuration will be ON"
+    		ln -sf /etc/nginx/snippets/php-true /etc/nginx/snippets/php
+		;;
+esac
+
+echo "-- launching nginx"
+
+trap "echo '- stopping nginx (on user request)'; nginx -s stop;" INT
+
+nginx
+
+exit 0
+

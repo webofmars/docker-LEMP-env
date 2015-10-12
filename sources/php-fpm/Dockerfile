@@ -1,4 +1,5 @@
 FROM debian:latest 
+MAINTAINER webofmars contact@webofmars.com
 RUN apt-get -y --no-install-recommends -q update  &&          \
     apt-get -y --no-install-recommends -q upgrade &&          \
     apt-get -y --no-install-recommends -q install php5-fpm    \
