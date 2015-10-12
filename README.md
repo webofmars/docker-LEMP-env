@@ -1,10 +1,10 @@
 Docker dev platform - Version 1.4
 =============================================================
 
-	- based on webofmars images (std debian jessy)
-	- nginx
+    - based on webofmars images (std debian jessy)
+    - nginx
     - php5-fpm
-	- mysql
+    - mysql
 
 =============================================================
 ## Usage :
@@ -17,6 +17,9 @@ Docker dev platform - Version 1.4
 
 =============================================================
 ## Changelog :
+
+v1.5:
+- ajout de imagemagick et de son support PHP
 
 v1.4 :
 - ajout de PhpMyAdmin

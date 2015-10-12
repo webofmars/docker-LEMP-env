@@ -16,7 +16,9 @@ RUN apt-get -y --no-install-recommends -q update  &&          \
                                                 php5-tidy     \
                                                 php5-xsl      \
                                                 php-apc       \
-                                                php5-apcu
+                                                php5-apcu     \
+						php5-imagick  \
+						imagemagick
 VOLUME ["/etc/php5", "/var/log"]
 WORKDIR /etc/php5
 CMD ["php5-fpm", "-F"]
