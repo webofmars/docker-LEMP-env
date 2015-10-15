@@ -1,21 +1,24 @@
 web:
     environment:
-        USEPHP: true 
+        USEPHP: false 
+        USEPHALCON: true 
     image: webofmars/nginx
     ports:
         - "80:80"
     volumes:
-        - ../data/nginx/logs:/var/log/nginx
-        - ../data/nginx/etc:/etc/nginx
-        - ../data/nginx/var/www/html:/var/www/html
+        - ./../data/nginx/logs:/var/log/nginx
+        - ./../data/nginx/etc:/etc/nginx
+        - ./../data/nginx/var/www/html:/var/www/html
     links:
-        - php:php
+        - phalcon:php
 
-php:
+phalcon:
+    labels:
+        'com.docker.compose.project': 'lempdev'
     image: webofmars/php-fpm-phalcon
     volumes:
-        - ../data/php5-fpm-phalcon/etc:/etc/php5
-        - ../data/php5-fpm-phalcon/logs:/var/log
-        - ../data/nginx/var/www/html:/var/www/html
+        - ./../data/php5-fpm-phalcon/etc:/etc/php5
+        - ./../data/php5-fpm-phalcon/logs:/var/log
+        - ./../data/nginx/var/www/html:/var/www/html
     ports:
         - "9200:9200"

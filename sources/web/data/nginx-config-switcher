@@ -2,24 +2,46 @@
 
 echo "- running $0"
 
+echo "-- insuring permissions are ok"
+chown -R www-data:www-data /var/www/html
+
 echo "-- generating configuration"
 
+USEPHP=$(perl -e 'if ($ENV{"USEPHP"} =~ /true|yes|on|1/i) { print(1); } else { print 0; }')
+USEPHALCON=$(perl -e 'if ($ENV{"USEPHALCON"} =~ /true|yes|on|1/i) { print(1); } else { print 0; }')
+
+if [ $USEPHP = 1 -a $USEPHALCON = 1 ]; then
+    echo "You can't use at the same time PHP and Phalcon configurations. Just choose one ! Best guess is USEPHP=off and USEPHALCON=true;"
+    exit 1
+fi
+
 case $USEPHP in
-	OFF|off|FALSE|false|OFF|off|0)
-    		echo "--- PHP configuration will be OFF"
-    		ln -sf /etc/nginx/snippets/php-false /etc/nginx/snippets/php
-		;;
-	*)
+	1)
     		echo "--- PHP configuration will be ON"
     		ln -sf /etc/nginx/snippets/php-true /etc/nginx/snippets/php
 		;;
+	*)
+    		echo "--- PHP configuration will be OFF"
+    		ln -sf /etc/nginx/snippets/php-false /etc/nginx/snippets/php
+		;;
 esac
+
+case $USEPHALCON in
+    1)
+            echo "--- PHALCON configuration will be ON"
+            ln -sf /etc/nginx/snippets/phalcon-true /etc/nginx/snippets/phalcon
+        ;;
+    *)
+            echo "--- PHALCON configuration will be OFF"
+            ln -sf /etc/nginx/snippets/phalcon-false /etc/nginx/snippets/phalcon
+        ;;
+esac
+
+[ $? ] || echo "Something bad happened !!!"
 
 echo "-- launching nginx"
 
 trap "echo '- stopping nginx (on user request)'; nginx -s stop;" INT
-
-nginx
+exec nginx
 
 exit 0
-

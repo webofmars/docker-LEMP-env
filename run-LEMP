@@ -2,4 +2,4 @@
 
 DCKCP=$(which docker-compose)
 
-$DCKCP -f ./config/LEMP.yml up
+$DCKCP -p 'LEMP' -f ./config/LEMP.yml up

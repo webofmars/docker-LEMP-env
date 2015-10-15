@@ -13,6 +13,7 @@ server {
     }
 
     include /etc/nginx/snippets/php;
+    include /etc/nginx/snippets/phalcon;
 
     # deny access to .htaccess files, if Apache's document root
     # concurs with nginx's one

@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.10
+Docker dev platform - Version 1.11
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -12,12 +12,22 @@ Docker dev platform - Version 1.10
 
 - for Nginx alone                      : run-LE
 - for Nginx + PHP                      : run-LEP
-- for Nginx + PHP avec phalcon         : run-LEP-with-phalcon
+- for Nginx + PHP avec phalcon         : run-LEP-phalcon
 - for Nginx + PHP + mysql              : run-LEMP
-- for Nginx + PHP avec phalcon + mysql : run-LEMP-with-phalcon
+- for Nginx + PHP avec phalcon + mysql : run-LEMP-phalcon
 
 =============================================================
 ## Changelog :
+v1.11:
+- modification des tailles d'upload dans PHP et nginx
+- ajout d'une page d'acceuil
+- ajout d'un moyen de vider la cache APCu
+- ajout d'un script pour changer les permissions des sites déployés
+- fix pour le bug OSX avec MySQL
+- ajout de nombreux paquets pour PHP
+- Configuration du rewrite pour phalcon
+- Activation du microcaching Nginx & PHP
+
 v1.10:
 - corrige un problème de montage avec les volumes php5-fpm-phalcon. Ils seront dorénavant montés.
 
@@ -54,4 +64,4 @@ v1.2 :
 
 ## Issues :
 
-- Pour le moment il semble que faire tourner mysql avec un volume partagé sur OSX soit un vrai souci avec les versions de dockers actuelles. Si vous rencontrez le problème, commentez juste les volumes mysql dans les fichiers YML.
+- Utilisez github pour en ouvrir si besoin.

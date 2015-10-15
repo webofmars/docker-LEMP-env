@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DCKCP=$(which docker-compose)
+
+$DCKCP -p 'LEP_phalcon' -f ./config/LEP-with-phalcon.yml up

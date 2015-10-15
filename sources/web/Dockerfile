@@ -2,6 +2,7 @@ FROM debian:latest
 MAINTAINER webofmars contact@webofmars.com
 
 ENV USEPHP=false
+ENV USEPHALCON=false
 
 RUN apt-get update -y --no-install-recommends -q
 RUN apt-get upgrade -y --no-install-recommends -q
