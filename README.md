@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.11
+Docker dev platform - Version 1.12
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -18,6 +18,9 @@ Docker dev platform - Version 1.11
 
 =============================================================
 ## Changelog :
+v1.12:
+- BUGFIX: run-LEMP ne tournait pas à cause d'un répertoire vide.
+
 v1.11:
 - modification des tailles d'upload dans PHP et nginx
 - ajout d'une page d'acceuil
