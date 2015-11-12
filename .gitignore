@@ -7,6 +7,8 @@
 # web
 /data/nginx/logs/*
 /data/nginx/var/www/html/*
+/data/nginx/etc/snippets/phalcon
+/data/nginx/etc/snippets/php
 
 # php-fpm
 /data/php5-fpm/logs/*
