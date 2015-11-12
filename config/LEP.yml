@@ -20,3 +20,10 @@ php:
         - ./../data/nginx/var/www/html:/var/www/html
     ports:
         - "9200:9200"
+    links:
+        - memcached:memcached
+
+memcached:
+    image: memcached
+    ports: 
+        - 11211

@@ -22,6 +22,12 @@ php:
         - "9200:9200"
     links:
         - db:db
+        - memcached:memcached
+
+memcached:
+    image: memcached
+    ports: 
+        - 11211
 
 db:
     image: mysql

@@ -1,11 +1,12 @@
-Docker dev platform - Version 1.14
+Docker dev platform - Version 1.15
 =============================================================
 
-    - based on webofmars images (std debian jessy)
-    - nginx
-    - php5-fpm
-    - phalcon (PHP engine sous stéroides)
-    - mysql
+    - based on the following images :
+        - webofmars/nginx (based on official debian lenny image)
+        - webofmars/php5-fpm (based on official debian lenny image)
+        - webofmars/php-fpm-phalcon (based on official debian lenny image)
+        - mysql (official)
+        - memcached (official)
 
 =============================================================
 ## Usage :
@@ -18,6 +19,9 @@ Docker dev platform - Version 1.14
 
 =============================================================
 ## Changelog :
+v1.15:
+- NEW : all PHP images now includes memcached support. Both for PHP sessions & users/apps storage
+
 v1.14:
 - BUGFIX: coorection d'un bug introduit dans la 1.13 avec le script de lancement de nginx '$(tty) ambigous redirect'
 

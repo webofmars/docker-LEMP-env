@@ -674,6 +674,7 @@ class CommunicationException extends \RuntimeException
                     <li><a href='./apc.php'>See APCu stats</a>
                     <li><a href='./clear-apc.php'>Clear APCu cache</a>
                     <li><a href='./pma/'>PhpMyAdmin</a>
+                    <li><a href='./phpMemcachedAdmin/'>Memcached Admin</a>
                 </ul>
             </p>
         </div>
