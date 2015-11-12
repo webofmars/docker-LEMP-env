@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.12
+Docker dev platform - Version 1.14
 =============================================================
 
     - based on webofmars images (std debian jessy)
@@ -18,6 +18,12 @@ Docker dev platform - Version 1.12
 
 =============================================================
 ## Changelog :
+v1.14:
+- BUGFIX: coorection d'un bug introduit dans la 1.13 avec le script de lancement de nginx '$(tty) ambigous redirect'
+
+v1.13:
+- Optimisation du script de lancement nginx
+
 v1.12:
 - BUGFIX: run-LEMP ne tournait pas à cause d'un répertoire vide.
 
