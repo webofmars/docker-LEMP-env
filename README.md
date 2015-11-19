@@ -1,4 +1,4 @@
-Docker dev platform - Version 1.15
+Docker dev platform - Version 1.15.1
 =============================================================
 
     - based on the following images :
@@ -7,6 +7,8 @@ Docker dev platform - Version 1.15
         - webofmars/php-fpm-phalcon (based on official debian lenny image)
         - mysql (official)
         - memcached (official)
+
+[![](https://badge.imagelayers.io/webofmars/nginx:latest.svg)](https://imagelayers.io/?images=webofmars/nginx:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm-phalcon:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm-phalcon:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/memcached:latest.svg)](https://imagelayers.io/?images=memcached:latest 'Get your own badge on imagelayers.io')
 
 =============================================================
 ## Usage :
