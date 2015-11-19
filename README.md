@@ -2,11 +2,11 @@ Docker dev platform - Version 1.15.1
 =============================================================
 
     - based on the following images :
-        - webofmars/nginx (based on official debian lenny image)
-        - webofmars/php5-fpm (based on official debian lenny image)
-        - webofmars/php-fpm-phalcon (based on official debian lenny image)
-        - mysql (official)
-        - memcached (official)
+        - webofmars/nginx (based on official debian lenny image) [![](https://badge.imagelayers.io/webofmars/nginx:latest.svg)](https://imagelayers.io/?images=webofmars/nginx:latest 'Get your own badge on imagelayers.io')
+        - webofmars/php-fpm (based on official debian lenny image) [![](https://badge.imagelayers.io/webofmars/php-fpm:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm:latest 'Get your own badge on imagelayers.io')
+        - webofmars/php-fpm-phalcon (based on official debian lenny image) [![](https://badge.imagelayers.io/webofmars/php-fpm-phalcon:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm-phalcon:latest 'Get your own badge on imagelayers.io')
+        - mysql (official) [![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:latest 'Get your own badge on imagelayers.io')
+        - memcached (official) [![](https://badge.imagelayers.io/memcached:latest.svg)](https://imagelayers.io/?images=memcached:latest 'Get your own badge on imagelayers.io')
 
 [![](https://badge.imagelayers.io/webofmars/nginx:latest.svg)](https://imagelayers.io/?images=webofmars/nginx:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm-phalcon:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm-phalcon:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/memcached:latest.svg)](https://imagelayers.io/?images=memcached:latest 'Get your own badge on imagelayers.io')
 
@@ -21,6 +21,9 @@ Docker dev platform - Version 1.15.1
 
 =============================================================
 ## Changelog :
+v1.15.1 :
+- README update for badges imagelayers
+
 v1.15:
 - NEW : all PHP images now includes memcached support. Both for PHP sessions & users/apps storage
 
