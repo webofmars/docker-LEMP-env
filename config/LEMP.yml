@@ -1,8 +1,9 @@
 web:
+    restart: always
+    build: ./../sources/web
     environment:
         USEPHP: true
         USEPHALCON: false
-    image: webofmars/nginx
     ports:
         - "80:80"
     volumes:
@@ -13,7 +14,8 @@ web:
         - php:php
 
 php:
-    image: webofmars/php-fpm
+    restart: always
+    build: ./../sources/php-fpm
     volumes:
         - ./../data/php5-fpm/etc:/etc/php5
         - ./../data/php5-fpm/logs:/var/log
