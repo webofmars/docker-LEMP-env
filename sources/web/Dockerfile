@@ -1,15 +1,19 @@
 FROM debian:latest
 MAINTAINER webofmars contact@webofmars.com
 
+# FIX write permissions to the app
+ENV BOOT2DOCKER_ID 1000
+ENV BOOT2DOCKER_GID 50
+RUN usermod -u ${BOOT2DOCKER_ID} www-data && \
+    usermod -G staff www-data
+RUN groupmod -g $(($BOOT2DOCKER_GID + 10000)) $(getent group $BOOT2DOCKER_GID | cut -d: -f1)
+RUN groupmod -g ${BOOT2DOCKER_GID} staff
+
 ENV USEPHP=false
 ENV USEPHALCON=false
 
 RUN apt-get update -y --no-install-recommends -q
 RUN apt-get upgrade -y --no-install-recommends -q
-RUN apt-get install -y --no-install-recommends -q curl
-RUN apt-get install -y --no-install-recommends -q netcat
-RUN apt-get install -y --no-install-recommends -q lsof
-RUN apt-get install -y --no-install-recommends -q tcpdump
 RUN apt-get install -y --no-install-recommends -q nginx-full
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN chown -R www-data:www-data /var/www/html
