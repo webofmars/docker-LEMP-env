@@ -1,0 +1,3 @@
+[submodule "tools/docker-scripts"]
+	path = tools/docker-scripts
+	url = https://github.com/webofmars/docker-scripts.git
