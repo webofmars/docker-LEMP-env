@@ -3,7 +3,7 @@
 echo "- running $0"
 
 echo "-- insuring permissions are ok"
-chown -R www-data:www-data /var/www/html
+setfacl -R -m u:www-data:rwx,g:www-data:rwx /var/www/html
 
 echo "-- generating configuration"
 
