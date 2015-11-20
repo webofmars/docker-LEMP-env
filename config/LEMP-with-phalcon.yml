@@ -25,6 +25,7 @@ php:
     links:
         - db:db
         - memcached:memcached
+        - maildev:maildev
 
 memcached:
     image: memcached
@@ -43,3 +44,9 @@ db:
         - MYSQL_DATABASE=devdb
         - MYSQL_USER=dev
         - MYSQL_PASSWORD=coders
+
+maildev:
+    restart: always
+    image: djfarrelly/maildev
+    ports:
+        - "1080:80"

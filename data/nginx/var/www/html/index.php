@@ -6,17 +6,16 @@
         <meta name="description"        content="LEMP Docker dev environment" />
         <meta name="keywords"           content="docker, webofmars, LEMP, dev" />
 
-        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     </head>
     <body>
     <div class="container">
         <div class="row text-center">
             <p>
-                <img src="http://lorempixel.com/400/200/business/">
+                <img src="//lorempixel.com/400/200/business/">
             </p>
             <h1>This is PHP <?php $version  = explode('.', PHP_VERSION); echo "$version[0].$version[1]"; ?> baby ;-)</h1>
             <p>enjoy this simple content or choose any of the other links bellow.</p>
@@ -30,6 +29,7 @@
                     <li><a href='./clear-apc.php'>Clear APCu cache</a>
                     <li><a href='./pma/'>PhpMyAdmin</a>
                     <li><a href='./phpMemcachedAdmin/'>Memcached Admin</a>
+                    <li><a href='#' onclick='window.location.href = "//" + location.hostname + ":1080/"'>maildev</a>
                 </ul>
             <p>
             <h1>Your projects</h1>

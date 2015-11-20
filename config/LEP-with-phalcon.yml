@@ -24,9 +24,15 @@ phalcon:
         - "9200:9200"
     links:
         - memcached:memcached
+        - maildev:maildev
 
 memcached:
     image: memcached
     ports: 
         - 11211
 
+maildev:
+    restart: always
+    image: djfarrelly/maildev
+    ports:
+        - "1080:80"
