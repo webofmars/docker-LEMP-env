@@ -2,8 +2,8 @@ web:
     restart: always
     build: ./../sources/web
     environment:
-        USEPHP: true
-        USEPHALCON: false
+        USEPHP: 'true'
+        USEPHALCON: 'false'
     ports:
         - "80:80"
     volumes:
@@ -20,13 +20,19 @@ php:
         - ./../data/php5-fpm/etc:/etc/php5
         - ./../data/php5-fpm/logs:/var/log
         - ./../data/nginx/var/www/html:/var/www/html
+    environment:
+        - BLACKFIRE_SERVER_ID
+        - BLACKFIRE_SERVER_TOKEN
+        - BLACKFIRE_LOG_LEVEL
     ports:
         - "9200:9200"
     links:
         - memcached:memcached
         - maildev:maildev
+        - blackfire:blackfire
 
 memcached:
+    restart: always
     image: memcached
     ports: 
         - 11211
@@ -36,3 +42,13 @@ maildev:
     image: djfarrelly/maildev
     ports:
         - "1080:80"
+
+blackfire:
+    restart: always
+    image: blackfire/blackfire
+    environment:
+        - BLACKFIRE_CLIENT_ID
+        - BLACKFIRE_CLIENT_TOKEN
+        - BLACKFIRE_SERVER_ID
+        - BLACKFIRE_SERVER_TOKEN
+        - BLACKFIRE_LOG_LEVEL

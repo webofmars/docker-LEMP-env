@@ -1,6 +1,5 @@
 #!/bin/bash
 
-DOCKER=$(which docker)
-DATADIR="$(realpath $(dirname $0))/data"
+source ./vars
 
-$DOCKER run -p 'LE' -e 'USEPHP=false' -e 'USEPHALCON=false' -v ${DATADIR}/nginx/etc:/etc/nginx -v ${DATADIR}/nginx/var/www/html:/var/www/html -v ${DATADIR}/nginx/logs:/var/log/nginx webofmars/nginx:latest
+$DOCKER run --rm=true --name 'LE' -e 'USEPHP=false' -e 'USEPHALCON=false' -p '80:80/tcp' -p '443:443/tcp' -v ${DATADIR}/nginx/etc:/etc/nginx -v ${DATADIR}/nginx/var/www/html:/var/www/html -v ${DATADIR}/nginx/logs:/var/log/nginx webofmars/nginx:latest
