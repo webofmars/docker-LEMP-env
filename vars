@@ -4,10 +4,10 @@ DKCP=$(which docker-compose)
 DATADIR="$(realpath $(dirname $0))/data"
 
 # blackfire config
-export BLACKFIRE_CLIENT_ID=xxxx-xxx-xxxx-xxxx-xxxx
-export BLACKFIRE_CLIENT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-export BLACKFIRE_SERVER_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-export BLACKFIRE_SERVER_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export BLACKFIRE_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export BLACKFIRE_CLIENT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export BLACKFIRE_SERVER_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export BLACKFIRE_SERVER_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 export BLACKFIRE_LOG_LEVEL=4
 
 alias 'blackfire-curl'='docker exec -it -e BLACKFIRE_CLIENT_ID=${BLACKFIRE_CLIENT_ID} -e BLACKFIRE_CLIENT_TOKEN={BLACKFIRE_CLIENT_TOKEN} blackfire/blackfire blackfire curl'
