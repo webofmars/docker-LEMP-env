@@ -1,0 +1,13 @@
+# common
+DOCKER=$(which docker)
+DKCP=$(which docker-compose)
+DATADIR="$(realpath $(dirname $0))/data"
+
+# blackfire config
+export BLACKFIRE_CLIENT_ID=1f2c5a64-fca9-45ee-b819-2c4a797d5d09
+export BLACKFIRE_CLIENT_TOKEN=e5fd6330658baafc2c0831ab5f2bac49967a79998c61a04234c5870c705d09f0
+export BLACKFIRE_SERVER_ID=fbc44bc6-26c7-4f8d-a6a8-a528bd0bb848
+export BLACKFIRE_SERVER_TOKEN=4d2972ed3a1c5b8b8bf70d7e24da7e3ed37aa2432a5803f7636be9c87bb9d532
+export BLACKFIRE_LOG_LEVEL=4
+
+alias 'blackfire-curl'='docker exec -it -e BLACKFIRE_CLIENT_ID=${BLACKFIRE_CLIENT_ID} -e BLACKFIRE_CLIENT_TOKEN={BLACKFIRE_CLIENT_TOKEN} blackfire/blackfire blackfire curl'

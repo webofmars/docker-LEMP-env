@@ -1,0 +1,18 @@
+#!/bin/bash
+
+source ../vars
+
+echo "BLACKFIRE_CLIENT_ID    : $BLACKFIRE_CLIENT_ID"
+echo "BLACKFIRE_CLIENT_TOKEN : $BLACKFIRE_CLIENT_TOKEN"
+echo "BLACKFIRE_SERVER_ID    : $BLACKFIRE_SERVER_ID"
+echo "BLACKFIRE_SERVER_TOKEN : $BLACKFIRE_SERVER_TOKEN"
+echo "BLACKFIRE_LOG_LEVEL    : $BLACKFIRE_LOG_LEVEL"
+
+echo "--- Running blackfire curl : docker exec -it lemp_blackfire_1 blackfire curl http://192.168.1.101/index.php"
+docker exec -it lemp_blackfire_1 blackfire curl http://192.168.1.101/index.php
+
+echo '--- LOGS BLACKFIRE ---'
+docker logs lemp_blackfire_1 2>&1
+
+echo '--- LOGS PHP ---'
+docker logs lemp_php_1 2>&1

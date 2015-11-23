@@ -6,6 +6,9 @@ v1.15.1 :
 - Optimisations of the ngninx launcher script
 - switched to build instead of direct images
 - better compatibility for win & osx OS
+- added maildev image
+- added blackfire image
+- added vars script that has to be sourced 1st (the run-\* scripts take care of it)
 
 v1.15:
 - NEW : all PHP images now includes memcached support. Both for PHP sessions & users/apps storage

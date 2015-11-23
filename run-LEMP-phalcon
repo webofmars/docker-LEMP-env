@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DCKCP=$(which docker-compose)
+source ./vars
 
-$DCKCP -p 'LEMP_phalcon' -f ./config/LEMP-with-phalcon.yml up
+$DKCP -p 'LEMP_phalcon' -f ./config/LEMP-with-phalcon.yml up

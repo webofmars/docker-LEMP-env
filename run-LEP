@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DCKCP=$(which docker-compose)
+source ./vars
 
-$DCKCP -p 'LEP' -f ./config/LEP.yml up
+$DKCP -p 'LEP' -f ./config/LEP.yml up
