@@ -17,4 +17,4 @@ docker logs lemp_blackfire_1 2>&1
 echo '--- LOGS PHP ---'
 docker logs lemp_php_1 2>&1
 echo '----------------'
-cat ./data/php5-fpm/logs/blackfire-probe.log
+cat ./data/php5-fpm/logs/blackfire.log
