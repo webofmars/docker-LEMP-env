@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ./vars
+
+$DKCP -p 'LEMP_phalcon' -f ./config/LEMP-phalcon-ES.yml up

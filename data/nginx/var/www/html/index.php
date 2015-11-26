@@ -55,6 +55,14 @@
                     ?>
                 </ul>
             </p>
+            <p>
+            <h2>Elasticsearch</h2>
+            <ul>
+                <li><a href='#' onclick='window.location.href = "//" + location.hostname + ":9200/_plugin/head"'>head</a>
+                <li><a href='#' onclick='window.location.href = "//" + location.hostname + ":9200/_plugin/hq"'>HQ</a>
+                <li><a href='#' onclick='window.location.href = "//" + location.hostname + ":9200/_plugin/kopf"'>kopf</a>
+            </ul>
+            </p>
         </div>
     </div>
 

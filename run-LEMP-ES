@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ./vars
+
+$DKCP -p 'LEMP' -f ./config/LEMP-ES.yml up

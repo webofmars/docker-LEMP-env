@@ -1,6 +1,12 @@
 docker-LEMP changelog
 ========================================================
 
+v1.16.1 :
+- added elasticsearch
+
+v1.15.2 :
+- blackfire optimisations
+
 v1.15.1 :
 - README update for badges imagelayers
 - Optimisations of the ngninx launcher script

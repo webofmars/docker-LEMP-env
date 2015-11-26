@@ -35,5 +35,5 @@ location ~ \.php$ {
         fastcgi_index /index.php;
 
         include /etc/nginx/snippets/fastcgi-php.conf;
-        fastcgi_pass php:9200;
+        fastcgi_pass php:9000;
 }

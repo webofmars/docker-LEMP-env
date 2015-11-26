@@ -19,3 +19,7 @@
 # mysql
 /data/mysql/data/*
 /data/mysql/logs/*
+
+# elasticsearch
+/data/elasticsearch/var/log
+/data/elasticsearch/usr/share/elasticsearch/data

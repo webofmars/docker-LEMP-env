@@ -25,7 +25,7 @@ php:
         - BLACKFIRE_SERVER_TOKEN
         - BLACKFIRE_LOG_LEVEL
     ports:
-        - "9200:9200"
+        - "9000:9000"
     links:
         - memcached:memcached
         - maildev:maildev

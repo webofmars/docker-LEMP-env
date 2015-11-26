@@ -11,6 +11,7 @@ With docker-LEMP you can run a local small server including :
 - a memcached server
 - a e-mail server
 - some interrestings stats with blackfire.io
+- data ready for search with elasticsearch
 
 and also give you production/network administrator a solid base to know how this should be deployed in production environment.
 
@@ -38,8 +39,9 @@ Under the hood, for people already aware of how docker is working docker-LEMP is
 - djfarrelly/maildev
 - blackfire/blackfire
 - djfarrelly/maildev
+- elastichsearch
 
-[![](https://badge.imagelayers.io/webofmars/nginx:latest.svg)](https://imagelayers.io/?images=webofmars/nginx:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm-phalcon:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm-phalcon:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/memcached:latest.svg)](https://imagelayers.io/?images=memcached:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/djfarrelly/maildev:latest.svg)](https://imagelayers.io/?images=djfarrelly/maildev:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/blackfire/blackfire:latest.svg)](https://imagelayers.io/?images=blackfire/blackfire:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/webofmars/nginx:latest.svg)](https://imagelayers.io/?images=webofmars/nginx:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/webofmars/php-fpm-phalcon:latest.svg)](https://imagelayers.io/?images=webofmars/php-fpm-phalcon:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/mysql:latest.svg)](https://imagelayers.io/?images=mysql:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/memcached:latest.svg)](https://imagelayers.io/?images=memcached:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/djfarrelly/maildev:latest.svg)](https://imagelayers.io/?images=djfarrelly/maildev:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/blackfire/blackfire:latest.svg)](https://imagelayers.io/?images=blackfire/blackfire:latest 'Get your own badge on imagelayers.io') [![](https://badge.imagelayers.io/elasticsearch:latest.svg)](https://imagelayers.io/?images=elasticsearch:latest 'Get your own badge on imagelayers.io')
 
 ## Issues :
 

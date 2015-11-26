@@ -50,7 +50,7 @@ location ~ \.php {
     fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
 
     fastcgi_index  /index.php;
-    fastcgi_pass   php:9200;
+    fastcgi_pass   php:9000;
 
     include /etc/nginx/snippets/fastcgi-php.conf;
 
