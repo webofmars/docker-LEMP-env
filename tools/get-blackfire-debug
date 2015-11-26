@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../vars
+source ./vars || exit 1
 
 echo "BLACKFIRE_CLIENT_ID    : $BLACKFIRE_CLIENT_ID"
 echo "BLACKFIRE_CLIENT_TOKEN : $BLACKFIRE_CLIENT_TOKEN"
@@ -16,3 +16,5 @@ docker logs lemp_blackfire_1 2>&1
 
 echo '--- LOGS PHP ---'
 docker logs lemp_php_1 2>&1
+echo '----------------'
+cat ./data/php5-fpm/logs/blackfire-probe.log
