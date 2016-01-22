@@ -5,6 +5,9 @@ WORKDIR /var/www/html
 ENTRYPOINT ["php5-fpm", "-F"]
 EXPOSE 9200
 
+#git
+RUN apt-get -y --no-install-recommends -q install git
+
 # phalconisation
 ADD ./data/php5-phalcon_2.0.7-ppa1~vivid_amd64.deb /tmp/
 RUN dpkg -i /tmp/php5-phalcon_2.0.7-ppa1~vivid_amd64.deb && rm /tmp/php5-phalcon_2.0.7-ppa1~vivid_amd64.deb

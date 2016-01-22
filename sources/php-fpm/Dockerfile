@@ -9,6 +9,9 @@ RUN apt-get -y --no-install-recommends -q install php5-fpm php5-cli php5-common 
 # less standard packages, open an issue to add some
 RUN apt-get -y --no-install-recommends -q install php-aws-sdk php-google-api-php-client php5-lasso php-date php-file php5-geoip php-gettext php5-json php-mail php5-memcache php5-memcached php-mime-type php5-mysqlnd-ms php-net-checkip php-net-smtp php-net-socket php-net-url php-openid php-services-json php5-ssh2 phpunit
 
+#git
+RUN apt-get -y --no-install-recommends -q install git
+
 # blackfire
 RUN apt-get -y --no-install-recommends -q install curl
 RUN export VERSION=`php -nr "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;"` \
