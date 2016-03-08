@@ -5,6 +5,9 @@ WORKDIR /var/www/html
 ENTRYPOINT ["php5-fpm", "-F"]
 EXPOSE 9200
 
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update -y -q
+
 #git
 RUN apt-get -y --no-install-recommends -q install git
 
